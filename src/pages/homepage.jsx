@@ -8,7 +8,13 @@ const homepage = () => {
             <i>The nerdest book community</i>
         </h2>
         <div className='row'>
-            {/* inseriamo i libri */}
+            <div className="col-12 col-md-6 col-lg-4">
+              <div className="card">
+                <div className="card-image-top">
+                  <img src="https://picsum.photos/200/300" alt="img" />
+                </div>
+              </div>
+            </div>
         </div>
     </>
   )
