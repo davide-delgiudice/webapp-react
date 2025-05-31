@@ -2,31 +2,74 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+const initialMovies = [
+  {
+    id: 1,
+    title: "titolo 1",
+    director: "regista 1",
+    genre: "genere 1",
+    release_year: "anno uscita 1",
+    image: "https://picsum.photos/500/300"
+  },
+  {
+    id: 2,
+    title: "titolo 2",
+    director: "regista 2",
+    genre: "genere 2",
+    release_year: "anno uscita 2",
+    image: "https://picsum.photos/500/300"
+  },
+  {
+    id: 3,
+    title: "titolo 3",
+    director: "regista 3",
+    genre: "genere 3",
+    release_year: "anno uscita 3",
+    image: "https://picsum.photos/500/300"
+  },
+  {
+    id: 4,
+    title: "titolo 4",
+    director: "regista 4",
+    genre: "genere 4",
+    release_year: "anno uscita 4",
+    image: "https://picsum.photos/500/300"
+  },
+  {
+    id: 5,
+    title: "titolo 5",
+    director: "regista 5",
+    genre: "genere 5",
+    release_year: "anno uscita 5",
+    image: "https://picsum.photos/500/300"
+  },
+]
+
 const homepage = () => {
   return (
     <>
-        <h1 className='text-primary'>Bool Movies</h1>
-        <h2>
-            <i>The nerdest movie community</i>
-        </h2>
-        <div className='row gy-4'>
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="card">
-                <div className="card-image-top">
-                  <img src="https://picsum.photos/500/300" className='img-fluid' alt="img" />
-                </div>
-                <div className='card-body'>
-                  <h3 className='text-primary'>Titolo</h3>
-                  <h4>
-                    <em>Regista</em>
-                  </h4>
-                  <p>Genre</p>
-                  <p>Anno di uscita</p>
-                  <Link className='btn btn-primary' to="/movies/1">Dettaglio Film</Link>
-                </div>
-              </div>
+      <h1 className='text-primary'>Bool Movies</h1>
+      <h2>
+        <i>The nerdest movie community</i>
+      </h2>
+      <div className='row gy-4'>
+        <div className="col-12 col-md-6 col-lg-4">
+          <div className="card">
+            <div className="card-image-top">
+              <img src="https://picsum.photos/500/300" className='img-fluid' alt="img" />
             </div>
+            <div className='card-body'>
+              <h3 className='text-primary'>Titolo</h3>
+              <h4>
+                <em>Regista</em>
+              </h4>
+              <p>Genre</p>
+              <p>Anno di uscita</p>
+              <Link className='btn btn-primary' to="/movies/1">Dettaglio Film</Link>
+            </div>
+          </div>
         </div>
+      </div>
     </>
   )
 }
