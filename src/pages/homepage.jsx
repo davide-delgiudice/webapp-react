@@ -13,6 +13,15 @@ const homepage = () => {
                 <div className="card-image-top">
                   <img src="https://picsum.photos/200/300" alt="img" />
                 </div>
+                <div className='card-body'>
+                  <h3 className='text-primary'>Titolo</h3>
+                  <h4>
+                    <em>Regista</em>
+                  </h4>
+                  <p>Genre</p>
+                  <p>Anno di uscita</p>
+                  <a href="">Link</a>
+                </div>
               </div>
             </div>
         </div>
