@@ -1,6 +1,6 @@
 import DefaultLayout from "./layout/DefaultLayout"
 import Homepage from "./pages/Homepage"
-import BookPage from "./pages/BookPage"
+import MoviePage from "./pages/MoviePage"
 import NotFoundPage from "./pages/NotFoundPage"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<Homepage />}></Route>
-            <Route path="/books/:id" element={<BookPage />}></Route>
+            <Route path="/movies/:id" element={<MoviePage />}></Route>
             <Route path="*" element={<NotFoundPage />}></Route>
           </Route>
         </Routes>

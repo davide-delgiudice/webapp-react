@@ -3,9 +3,9 @@ import React from 'react'
 const homepage = () => {
   return (
     <>
-        <h1 className='text-primary'>Bool Books</h1>
+        <h1 className='text-primary'>Bool Movies</h1>
         <h2>
-            <i>The nerdest book community</i>
+            <i>The nerdest movie community</i>
         </h2>
         <div className='row'>
             <div className="col-12 col-md-6 col-lg-4">
