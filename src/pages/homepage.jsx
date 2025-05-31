@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 const homepage = () => {
   return (
     <>
@@ -7,11 +9,11 @@ const homepage = () => {
         <h2>
             <i>The nerdest movie community</i>
         </h2>
-        <div className='row'>
+        <div className='row gy-4'>
             <div className="col-12 col-md-6 col-lg-4">
               <div className="card">
                 <div className="card-image-top">
-                  <img src="https://picsum.photos/200/300" alt="img" />
+                  <img src="https://picsum.photos/500/300" className='img-fluid' alt="img" />
                 </div>
                 <div className='card-body'>
                   <h3 className='text-primary'>Titolo</h3>
@@ -20,7 +22,7 @@ const homepage = () => {
                   </h4>
                   <p>Genre</p>
                   <p>Anno di uscita</p>
-                  <a href="">Link</a>
+                  <Link className='btn btn-primary' to="/movies/1">Dettaglio Film</Link>
                 </div>
               </div>
             </div>
