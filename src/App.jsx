@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<h1>Homepage</h1>}></Route>
+            <Route path="/books/:id" element={<h1>Dettaglio pagina</h1>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
