@@ -58,19 +58,19 @@ const homepage = () => {
       <div className='row gy-4'>
         {movies.map((movie) => {
           return(
-          <div className="col-12 col-md-6 col-lg-4">
+          <div className="col-12 col-md-6 col-lg-4" key={`movie-${movie.id}`}>
             <div className="card">
               <div className="card-image-top">
-                <img src="https://picsum.photos/500/300" className='img-fluid' alt="img" />
+                <img src={movie.image} className='img-fluid' alt="img" />
               </div>
               <div className='card-body'>
-                <h3 className='text-primary'>Titolo</h3>
+                <h3 className='text-primary'>{movie.title}</h3>
                 <h4>
-                  <em>Regista</em>
+                  <em>{movie.director}</em>
                 </h4>
-                <p>Genre</p>
-                <p>Anno di uscita</p>
-                <Link className='btn btn-primary' to="/movies/1">Dettaglio Film</Link>
+                <p>{movie.genre}</p>
+                <p>{movie.release_year}</p>
+                <Link className='btn btn-primary' to={`/movies/${movie.id}`}>Dettaglio Film</Link>
               </div>
             </div>
           </div>
