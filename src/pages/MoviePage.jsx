@@ -42,7 +42,7 @@ const MoviePage = () => {
               <p>{movie.genre}</p>
               <p>{movie.release_year}</p>
               <p>{movie.abstract}</p>
-              <p className='fst-italic'>Tutte le valutazioni: {renderStars(movie.average_vote)}</p>
+              <p className='fst-italic'>Tutte le valutazioni: <StarRating vote={movie.average_vote} /></p>
           </div>
       </div>
       <div className="row">

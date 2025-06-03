@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StarRating = () => {
+const StarRating = ({ vote }) => {
 
     // metodo per le stelle in base al voto
     const renderStars = () => {
