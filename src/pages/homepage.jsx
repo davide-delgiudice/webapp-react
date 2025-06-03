@@ -2,7 +2,7 @@ import React from 'react'
 import MovieCard from '../components/MovieCard'
 import axios from 'axios'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const initialMovies = [
   {
@@ -49,6 +49,14 @@ const initialMovies = [
 
 const homepage = () => {
     const [movies, setMovies] = useState(initialMovies);
+
+      useEffect(() => {
+        axios.get('http://127.0.0.1:3000/movie').then((resp) => {
+          console.log(resp);
+        }).catch((err) => {
+          console.log(err);
+        });
+      }, []);
 
   return (
     <>
