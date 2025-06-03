@@ -1,4 +1,5 @@
 import React from 'react'
+import StarRating from './StarRating';
 
 const ReviewCard = ({ review }) => {
     const { text, vote, name } = review;
@@ -7,7 +8,7 @@ const ReviewCard = ({ review }) => {
     <div className='col-12'>
         <div className="card p-2">
             <p>{text}</p>
-            <p>{vote}</p>
+            <p><StarRating vote={vote} /></p>
             <p>{name}</p>
         </div>
     </div>
