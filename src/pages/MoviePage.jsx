@@ -5,22 +5,42 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
-const BookPage = () => {
+const MoviePage = () => {
+  const { id } = useParams();
+
+  const [movie, setMovie] = useState(null);
+
+  const fetchMovies = () => {
+    axios.get(`http://127.0.0.1:3000/movie/${id}`).then((resp) => {
+      console.log("Dati film ricevuti:", resp.data);
+      setMovie(resp.data);
+    })
+    .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
+
+  if (!movie) {
+    return <p>Caricamento in corso...</p>;
+  }
+
   return (
     <>
       <div className='row'>
           <div className="col-12 col-md-6 col-lg-4">
-              <img src="https://picsum.photos/500/300" className='img-fluid' alt="img" />
+              <img src={movie.image} className='img-fluid' alt="img" />
           </div>
           <div className="col-12 col-md-6 col-lg-4">
-              <h1>Titolo</h1>
+              <h1>{movie.title}</h1>
               <h3 className='text-primary'>Titolo</h3>
               <h4>
-                <em>Regista</em>
+                <em>{movie.director}</em>
               </h4>
-              <p>Genre</p>
-              <p>Anno di uscita</p>
-              <p>Sinossi</p>
+              <p>{movie.genre}</p>
+              <p>{movie.release_year}</p>
+              <p>{movie.abstract}</p>
           </div>
       </div>
       <div className="row">
@@ -41,4 +61,4 @@ const BookPage = () => {
   )
 }
 
-export default BookPage
+export default MoviePage
