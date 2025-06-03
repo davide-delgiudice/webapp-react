@@ -1,6 +1,7 @@
 import React from 'react'
 import ReviewCard from '../components/ReviewCard'
 import axios from 'axios'
+import StarRating from '../components/StarRating'
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -16,15 +17,6 @@ const MoviePage = () => {
       setMovie(resp.data);
     })
     .catch((err) => console.log(err));
-  };
-
-  // metodo per le stelle in base al voto
-  const renderStars = (vote) => {
-    return [1, 2, 3, 4, 5].map((elem, i) => {
-      return (
-        <i key={`star-average-${i}`} className={`fa-star ${i < vote ? "fa-solid" : "fa-regular"} text-warning`}></i>
-      );
-    });
   };
 
   useEffect(() => {
