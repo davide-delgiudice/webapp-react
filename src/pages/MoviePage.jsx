@@ -18,6 +18,15 @@ const MoviePage = () => {
     .catch((err) => console.log(err));
   };
 
+  // metodo per le stelle in base al voto
+  const renderStars = (vote) => {
+    return [1, 2, 3, 4, 5].map((elem, i) => {
+      return (
+        <i key={`star-average-${i}`} className={`fa-star ${i < vote ? "fa-solid" : "fa-regular"} text-warning`}></i>
+      );
+    });
+  };
+
   useEffect(() => {
     fetchMovies();
   }, []);
@@ -41,6 +50,7 @@ const MoviePage = () => {
               <p>{movie.genre}</p>
               <p>{movie.release_year}</p>
               <p>{movie.abstract}</p>
+              <p className='fst-italic'>Tutte le valutazioni: {renderStars(movie.average_vote)}</p>
           </div>
       </div>
       <div className="row">
