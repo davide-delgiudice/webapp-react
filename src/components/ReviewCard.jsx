@@ -1,8 +1,16 @@
 import React from 'react'
 
-const ReviewCard = () => {
+const ReviewCard = ({ review }) => {
+    const { text, vote, name } = review;
+
   return (
-    <div>ReviewCard</div>
+    <div className='col-12'>
+        <div className="card p-2">
+            <p>{text}</p>
+            <p>{vote}</p>
+            <p>{name}</p>
+        </div>
+    </div>
   )
 }
 
