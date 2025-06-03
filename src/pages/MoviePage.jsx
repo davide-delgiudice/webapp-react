@@ -49,13 +49,11 @@ const MoviePage = () => {
             <h3>Recensioni Film</h3>
           </div>
         </div>
-        <div className="col-12">
-          <div className="card p-3">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, harum?</p>
-            <p>Voto</p>
-            <p>Autore</p>
+        {movie.reviews.map((review) => (
+          <div className="row gy-2" key={`review-${review.id}`}>
+            <ReviewCard review={review} />
           </div>
-        </div>
+        ))}
       </div>
     </>
   )
