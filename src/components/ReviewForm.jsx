@@ -7,6 +7,8 @@ const ReviewForm = () => {
     // valori iniziali della form
     const initialData = {name: "", text: "", vote: "" };
 
+    const [formData, setFormData] = useState(initialData);
+
   return (
     <div className='card'>
         <div className='card-header'>
