@@ -33,6 +33,9 @@ const ReviewForm = () => {
                         <textarea name="text" id="text" className='form-comtrol' value={formData.text} onChange={setFieldValue}></textarea>
                     </div>
                 </div>
+                <div className="form-group">
+                    <button className="btn-btn-main" type='submit'>Invia Recensione</button>
+                </div>
             </form>
         </div>
     </div>
