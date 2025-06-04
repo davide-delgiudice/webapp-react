@@ -16,6 +16,17 @@ const ReviewForm = () => {
         setFormData({ ...formData, [name]: value });
     }
 
+    // metodo per salvare la recensione
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        axios.post(`http://127.0.0.1:3000/movie/${id}/reviews`, formData, 
+            {headers: {"Content-Type": "application/json"},
+        }).then(() => {
+            setFormData(initialData);
+        });
+    };
+
   return (
     <div className='card'>
         <div className='card-header'>
