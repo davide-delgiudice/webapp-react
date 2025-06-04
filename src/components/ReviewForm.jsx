@@ -10,6 +10,11 @@ const ReviewForm = () => {
     const [formData, setFormData] = useState(initialData);
 
     // funzione che cambia i valori dei campi input
+    const setFieldValue = (e) => {
+        const { value, name } = e.target;
+
+        setFormData({ ...formData, [name]: value });
+    }
 
   return (
     <div className='card'>
@@ -20,12 +25,12 @@ const ReviewForm = () => {
             <form>
                 <div className="form-group">
                     <label htmlFor="" className="control-label">Name</label>
-                    <input type="text" className="form-control" name="name" placeholder='Inserisci il tuo nome' required value={formData.name}/>
+                    <input type="text" className="form-control" name="name" placeholder='Inserisci il tuo nome' value={formData.name} onChange={setFieldValue} required />
                     <label htmlFor="" className="control-label">Voto</label>
-                    <input min="0" max="5" type="number" className="form-control" name="vote" placeholder='Inserisci il voto' required value={formData.vote}/>
+                    <input min="0" max="5" type="number" className="form-control" name="vote" placeholder='Inserisci il voto' value={formData.vote} onChange={setFieldValue} required />
                     <div className="form-group">
                         <label htmlFor="" className="control-label">Testo</label>
-                        <textarea name="text" id="text" className='form-comtrol' value={formData.text}></textarea>
+                        <textarea name="text" id="text" className='form-comtrol' value={formData.text} onChange={setFieldValue}></textarea>
                     </div>
                 </div>
             </form>
