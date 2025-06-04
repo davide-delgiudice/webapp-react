@@ -9,6 +9,8 @@ const ReviewForm = () => {
 
     const [formData, setFormData] = useState(initialData);
 
+    // funzione che cambia i valori dei campi input
+
   return (
     <div className='card'>
         <div className='card-header'>
@@ -18,12 +20,12 @@ const ReviewForm = () => {
             <form>
                 <div className="form-group">
                     <label htmlFor="" className="control-label">Name</label>
-                    <input type="text" className="form-control" name="name" placeholder='Inserisci il tuo nome' required />
+                    <input type="text" className="form-control" name="name" placeholder='Inserisci il tuo nome' required value={formData.name}/>
                     <label htmlFor="" className="control-label">Voto</label>
-                    <input min="0" max="5" type="number" className="form-control" name="vote" placeholder='Inserisci il voto' required />
+                    <input min="0" max="5" type="number" className="form-control" name="vote" placeholder='Inserisci il voto' required value={formData.vote}/>
                     <div className="form-group">
                         <label htmlFor="" className="control-label">Testo</label>
-                        <textarea name="text" id="text" className='form-comtrol'></textarea>
+                        <textarea name="text" id="text" className='form-comtrol' value={formData.text}></textarea>
                     </div>
                 </div>
             </form>
