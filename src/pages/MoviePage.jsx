@@ -57,7 +57,7 @@ const MoviePage = () => {
             <ReviewCard review={review} />
           </div>
         ))}
-        <ReviewForm />
+        <ReviewForm movie_id={movie.id} reloadReviews={fetchMovies} />
       </div>
     </>
   )
