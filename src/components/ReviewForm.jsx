@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const ReviewForm = () => {
     // valori iniziali della form
-    
+    const initialData = {name: "", text: "", vote: "" };
 
   return (
     <div className='card'>
