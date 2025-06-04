@@ -1,7 +1,8 @@
 import React from 'react'
-import ReviewCard from '../components/ReviewCard'
 import axios from 'axios'
+import ReviewCard from '../components/ReviewCard'
 import StarRating from '../components/StarRating'
+import ReviewForm from '../components/ReviewForm'
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -56,6 +57,7 @@ const MoviePage = () => {
             <ReviewCard review={review} />
           </div>
         ))}
+        <ReviewForm />
       </div>
     </>
   )

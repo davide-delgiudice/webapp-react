@@ -2,6 +2,7 @@ import React from 'react'
 import StarRating from './StarRating';
 
 const ReviewCard = ({ review }) => {
+
     const { text, vote, name } = review;
 
   return (
